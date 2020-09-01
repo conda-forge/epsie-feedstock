@@ -5,7 +5,7 @@ Home: https://github.com/cdcapano/epsie
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: An Embarrassingly Parallel Sampler for Inference Estimation.
 
