@@ -1,5 +1,5 @@
 {% set name = "epsie" %}
-{% set version = "0.7" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f90e5aeaaa670962331f3074ca52b79fed11681bf8b0d70c7f47dec2ec9ea92e
+  sha256: 41a54fe4404e46ba1bbfa6db4de3d6925724770309e1a09b5344456143a1bb17
 
 build:
   noarch: python
