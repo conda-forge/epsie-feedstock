@@ -20,18 +20,22 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - numpy
+    - numpy >=1.17.0
     - python >=3.6
     - randomgen >=1.18
     - scipy >=0.16.0
     - six >1.10.0
 
 test:
+  requires:
+    - pip
   imports:
     - epsie
     - epsie.chain
     - epsie.proposals
     - epsie.samplers
+  commands:
+    - python -m pip check
 
 about:
   home: https://github.com/cdcapano/epsie
