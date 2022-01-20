@@ -1,5 +1,5 @@
 {% set name = "epsie" %}
-{% set version = "0.7.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41a54fe4404e46ba1bbfa6db4de3d6925724770309e1a09b5344456143a1bb17
+  sha256: 4dc2b7a26d5c0b09b5b8d76fd12a3fb414f6bad480a4cfa815160cba08f8a7d0
 
 build:
   noarch: python
@@ -20,18 +20,22 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - numpy
+    - numpy >=1.17.0
     - python >=3.6
     - randomgen >=1.18
     - scipy >=0.16.0
     - six >1.10.0
 
 test:
+  requires:
+    - pip
   imports:
     - epsie
     - epsie.chain
     - epsie.proposals
     - epsie.samplers
+  commands:
+    - python -m pip check
 
 about:
   home: https://github.com/cdcapano/epsie
